@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자색 바꾸기</title>
+    <style>
+      #close {
+        display: none;
+      }
+      /* 토글로 바꾸는법 */
+      /* .red {
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <button class="over" id="open" onclick="showRed()">글자색 바꾸기</button>
+      <button id="close" onclick="showBlack()">글자색 바꾸기</button>
+      <div>
+        <p class="text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+          tempora nihil accusamus voluptates doloremque dolores autem quidem.
+          Pariatur reprehenderit vitae, debitis, hic suscipit corrupti dolorum
+          sint aut eaque fugit iste!
+        </p>
+      </div>
+    </div>
+    <!-- 스크립트  -->
+    <script>
+      // 스타일로 바꾸는법
+      // function showRed() {
+      //   document.querySelector(".text").style.color = "red";
+      //   document.querySelector("#open").style.display = "none";
+      //   document.querySelector("#close").style.display = "block";
+      // }
+      // function showBlack() {
+      //   document.querySelector(".text").style.color = "black";
+      //   document.querySelector("#close").style.display = "none";
+      //   document.querySelector("#open").style.display = "block";
+      // }
+      // 토글로 바꾸는법
+      // function showRed() {
+      //   var change = document.querySelector("p");
+      //   change.classList.toggle("red");
+      // }
+      // 랜덤색 바꾸는법
+      function showRed() {
+        var change = document.querySelector("p");
+        var colors = [
+          "red",
+          "blue",
+          "green",
+          "purple",
+          "orange",
+          "gray",
+          "yellow",
+          "skyblue",
+        ];
+        var randomIndex = Math.floor(Math.random() * colors.length);
+        var randomColor = colors[randomIndex];
+        change.style.color = randomColor;
+      }
+    </script>
+
+    <!--  -->
+  </body>
+</html>

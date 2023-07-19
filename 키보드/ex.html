@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>색깔별 박스 바꾸기</title>
+    <style>
+      .wrap {
+        margin: auto;
+      }
+      button {
+        background-color: #fff;
+        border: 1px solid #c9c9c9;
+        color: #444444e5;
+      }
+      .box {
+        background-color: #fff;
+        border: 1px solid #c9c9c9;
+        width: 200px;
+        height: 100px;
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="three">
+        <button id="green">Green</button>
+        <button id="orange">Orange</button>
+        <button id="purple">Purple</button>
+      </div>
+      <div class="box" id="square"></div>
+    </div>
+    <!-- 스크립트 -->
+    <script>
+      document.querySelector("#green").onclick = function () {
+        document.querySelector("#square").style.backgroundColor = "green";
+      };
+      document.querySelector("#orange").onclick = function () {
+        document.querySelector("#square").style.backgroundColor = "orange";
+      };
+      document.querySelector("#purple").onclick = function () {
+        document.querySelector("#square").style.backgroundColor = "purple";
+      };
+    </script>
+  </body>
+</html>

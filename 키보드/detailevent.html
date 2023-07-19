@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detailEVENT</title>
+    <style>
+      .wrap {
+        margin: auto;
+        padding: 15px 20px;
+        width: 500px;
+        height: auto;
+        position: relative;
+      }
+      button {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      .over {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+      }
+      .box2 {
+        width: 400px;
+        height: auto;
+        text-align: left;
+        line-height: 1.4;
+        display: none;
+      }
+      . {
+        border: 5px solid transparent;
+      }
+      img {
+        width: 400px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box"><img src="images/min.jpeg" alt="민들레" /></div>
+      <button class="over" id="open" onclick="showDetail()">
+        상세 설명 보기
+      </button>
+      <div class="box2">
+        <h4>민들레</h4>
+        <p>
+          어디서나 매우 흔하게 보이는 잡초로서 바닥에 딱 붙어 서 꽃봉오리 하나가
+          쏙 올라온다. 톱니 모양의 잎새와 눈에 확 띄는 노란 꽃이 인상적이다.
+          특히 꽃이 지고나 면 솜털모양의 깃을 가진 씨앗들이 나오는데 바람을 타
+          고 날아가서 널리 퍼진다.
+        </p>
+        <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+      </div>
+    </div>
+    <!-- 스크립트  -->
+    <script>
+      function showDetail() {
+        document.querySelector(".box2").style.display = "block";
+        document.querySelector("#open").style.display = "none";
+      }
+      function hideDetail() {
+        document.querySelector(".box2").style.display = "none";
+        document.querySelector("#open").style.display = "block";
+      }
+    </script>
+    <!--  -->
+  </body>
+</html>

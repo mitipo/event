@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyup</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+      .box.active {
+        background-color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>keyup이벤트 예제</h1>
+    <div class="box"></div>
+    <p>키보드에서 손을 떼보세요.</p>
+    <script>
+      function handleKeyUp(event) {
+        var box = document.querySelector(".box");
+        box.classlist.add("active");
+      }
+      window.addEventListener("keyup", handleKeyUp);
+    </script>
+  </body>
+</html>
